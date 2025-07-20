@@ -3,76 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Shoubhik Banerjee</title>
+  <title>Dr. Shoubhik Banerjee | Emergency Medicine Specialist</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Dr. Shoubhik Banerjee</h1>
-    <p>Emergency Medicine Specialist</p>
-    <address>
-      📍 Kolkata, India<br>
-      📞 <a href="tel:+917763807603">+91-7763807603</a><br>
-      📧 <a href="mailto:shoubhik@hotmail.com">shoubhik@hotmail.com</a>
-    </address>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <p>Emergency Medicine Specialist | MBBS, GWU-MEM</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="toggleTheme()">Toggle Theme</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section class="accordion">
-      <h2>Academic Details</h2>
-      <div class="panel">
-        <ul>
-          <li>MBBS – MGM Medical College, Indore</li>
-          <li>MEM – GWU International Program</li>
-          <li>10+2 – Loyola High School, Jamshedpur</li>
-          <li>10th – Loyola High School, Jamshedpur</li>
-        </ul>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Dr. Shoubhik Banerjee, an Emergency Medicine Specialist with MBBS from MGM Medical College and MEM from George Washington University. Based in Kolkata, I've built Emergency Departments from the ground up, led care in high-stakes environments, and pioneered protocols to improve outcomes. My interests span pediatric care, psychiatry, workflow innovation, and research.
+    </p>
+  </section>
 
-    <section class="accordion">
-      <h2>Certifications</h2>
-      <div class="panel">
-        <ul>
-          <li>BLS, ACLS, PALS – Instructor Certified</li>
-          <li>ATLS, Critical Care Courses</li>
-          <li>Difficult Airway, Ultrasound Life Support</li>
-        </ul>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>CPR, Intubation, ACLS, BLS, PALS, ATLS</li>
+      <li>Central Line, Arterial Line, Chest Drain, Dialysis Access</li>
+      <li>Temporary Pacing, Paracentesis, Pleural Tapping</li>
+      <li>POCUS, Suturing, NICU/PICU Protocols</li>
+      <li>Windows/Linux Troubleshooting, Codec Optimization</li>
+      <li>Web Development: HTML, CSS, JavaScript</li>
+    </ul>
+  </section>
 
-    <section class="accordion">
-      <h2>Work Experience</h2>
-      <div class="panel">
-        <p>Consultant at Sri Sathya Sai Sarla Memorial Hospital (2021–Present), Senior Registrar at Ruby and Peerless Hospitals, PG training under GWU-MEM, etc.</p>
-      </div>
-    </section>
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <ul>
+      <li><strong>Trilife Hospital, Bengaluru:</strong> Consultant ED (2024–Present)</li>
+      <li><strong>Sri Sathya Sai Sarla Memorial Hospital:</strong> Consultant & ED In-charge (2021–2024)</li>
+      <li><strong>Ruby General Hospital:</strong> Senior Registrar, Emergency Dept. (2021)</li>
+      <li><strong>Peerless Hospital:</strong> Senior Registrar, COVID ICU (2020–2021)</li>
+      <li><strong>GWU-MEM Program:</strong> PG Trainee at Peerless and Medica Hospitals (2017–2020)</li>
+      <li><strong>Tata Main Hospital:</strong> Medical Officer, Emergency Dept. (2013–2015)</li>
+      <li><strong>Internship:</strong> Maharaja Yeshwantrao Hospital, Indore (2010–2011)</li>
+    </ul>
+  </section>
 
-    <section class="accordion">
-      <h2>Skills</h2>
-      <div class="panel">
-        <p>CPR, Intubation, POCUS, Central Line, Chest Drain, Paracentesis, etc.</p>
-      </div>
-    </section>
+  <section id="academics">
+    <h2>Academic Qualifications</h2>
+    <ul>
+      <li>MEM – George Washington University (2017–2020)</li>
+      <li>MBBS – MGM Medical College, Indore (2005–2010)</li>
+      <li>ISC – Loyola High School, Jamshedpur (2004)</li>
+      <li>ICSE – Loyola High School, Jamshedpur (2002)</li>
+    </ul>
+  </section>
 
-    <section class="accordion">
-      <h2>Interests</h2>
-      <div class="panel">
-        <ul>
-          <li>Emergency Medicine & Resuscitation</li>
-          <li>Pediatrics</li>
-          <li>Psychiatry/Psychology</li>
-          <li>Research and Academics</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:shoubhik@hotmail.com">shoubhik@hotmail.com</a></p>
+    <p>Phone: +91-7763807603</p>
+    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+  </section>
 
   <footer>
     <p>© 2025 Dr. Shoubhik Banerjee</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
