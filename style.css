@@ -1,50 +1,75 @@
-/* Smooth transitions for panels and theme */
+/* Global Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: #f9fbfc;
+  color: #2c3e50;
 }
 
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, padding 0.3s ease;
-  padding: 0 1rem;
-  opacity: 0;
+/* Header */
+header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.panel.active {
-  max-height: 500px;
-  padding: 1rem;
-  opacity: 1;
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-/* Section headers hover animation */
-.accordion h2 {
+header p {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 15px;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a, button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  transition: color 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-.accordion h2:hover {
-  color: #0066cc;
+nav a:hover, button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Fade-in for page content */
-main {
-  animation: fadeIn 1s ease-in-out;
+/* Section Layout */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Dark mode */
-.dark-mode {
-  background-color: #1e1e2f;
-  color: #f4f4f4;
-}
+section h2 {
+  color: #34495e;
+  margin-bottom: 20px;
+  border-left: 5px solid
