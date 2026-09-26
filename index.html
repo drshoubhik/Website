@@ -4,67 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Shoubhik Banerjee</title>
+  <meta name="description" content="Dr. Shoubhik Banerjee, MBBS, GWU-MEM – Emergency Medicine Specialist, Kolkata." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    document.documentElement.classList.add('js');
+    // Apply saved theme before paint to avoid a flash
+    try {
+      const t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Dr. Shoubhik Banerjee, MBBS, GWU-MEM</h1>
-    <p>Emergency Medicine Specialist</p>
-    <address>
-      📞 +91-7763807603<br>
-      📧 <a href="mailto:shoubhik@hotmail.com">shoubhik@hotmail.com</a>
-    </address>
+  <nav class="topbar">
+    <a href="#top" class="brand">SB</a>
+    <div class="links">
+      <a href="#academics">Academics</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </div>
+    <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+    </button>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-inner">
+      <div class="avatar" aria-hidden="true">SB</div>
+      <p class="eyebrow">Emergency Medicine Specialist</p>
+      <h1>Dr. Shoubhik Banerjee</h1>
+      <p class="creds">MBBS · GWU-MEM</p>
+      <div class="contact">
+        <a class="pill" href="tel:+917763807603">📞 +91-7763807603</a>
+        <a class="pill" href="mailto:shoubhik@hotmail.com">📧 shoubhik@hotmail.com</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Academic Details</h2>
-      <ul>
-        <li>MBBS – MGM Medical College, DAVV (2005–2010)</li>
-        <li>MEM – George Washington University Programme (2017–2020)</li>
-        <li>10+2 – Loyola High School, Jamshedpur (85.6%)</li>
-        <li>10th – Loyola High School, Jamshedpur (84.5%)</li>
+    <section id="academics" class="card reveal">
+      <h2><span class="num">01</span> Academic Details</h2>
+      <ul class="timeline">
+        <li><span class="when">2017–2020</span><strong>MEM</strong><em>George Washington University Programme</em></li>
+        <li><span class="when">2005–2010</span><strong>MBBS</strong><em>MGM Medical College, DAVV</em></li>
+        <li><span class="when">2004</span><strong>10+2</strong><em>Loyola High School, Jamshedpur</em></li>
+        <li><span class="when">2002</span><strong>10th</strong><em>Loyola High School, Jamshedpur</em></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>BLS, ACLS, PALS – Certified Instructor</li>
-        <li>ATLS Provider, Ultrasound Life Support</li>
-        <li>Difficult Airway Workshop</li>
-        <li>Comprehensive Critical Care e-Course</li>
-      </ul>
+    <section id="certifications" class="card reveal">
+      <h2><span class="num">02</span> Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert"><span class="cert-icon">❤️</span>BLS, ACLS, PALS<small>Certified Instructor</small></div>
+        <div class="cert"><span class="cert-icon">🚑</span>ATLS Provider<small>Ultrasound Life Support</small></div>
+        <div class="cert"><span class="cert-icon">🫁</span>Difficult Airway<small>Workshop</small></div>
+        <div class="cert"><span class="cert-icon">🏥</span>Comprehensive Critical Care<small>e-Course</small></div>
+      </div>
     </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>Sri Sathya Sai Sarla Memorial Hospital</strong> – Consultant, Emergency Dept. (2021–Present)</p>
-      <p><strong>Ruby General Hospital</strong> – Senior Registrar, Emergency Dept. (2021)</p>
-      <p><strong>Peerless Hospital</strong> – Senior Registrar, COVID ICU (2020–2021)</p>
-      <p><strong>GWU-MEM PG Trainee</strong> – Peerless & Medica Hospitals (2017–2020)</p>
-      <p><strong>Tata Main Hospital</strong> – Medical Officer (2013–2015)</p>
-      <p><strong>Maharaja Yeshwantrao Hospital</strong> – Internship (2010–2011)</p>
+    <section id="experience" class="card reveal">
+      <h2><span class="num">03</span> Work Experience</h2>
+      <ol class="timeline">
+        <li class="current"><span class="when">2021–Present</span><strong>Sri Sathya Sai Sarla Memorial Hospital</strong><em>Consultant, Emergency Dept.</em></li>
+        <li><span class="when">2021</span><strong>Ruby General Hospital</strong><em>Senior Registrar, Emergency Dept.</em></li>
+        <li><span class="when">2020–2021</span><strong>Peerless Hospital</strong><em>Senior Registrar, COVID ICU</em></li>
+        <li><span class="when">2017–2020</span><strong>GWU-MEM PG Trainee</strong><em>Peerless &amp; Medica Hospitals</em></li>
+        <li><span class="when">2013–2015</span><strong>Tata Main Hospital</strong><em>Medical Officer</em></li>
+        <li><span class="when">2010–2011</span><strong>Maharaja Yeshwantrao Hospital</strong><em>Internship</em></li>
+      </ol>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <p>CPR, Intubation, Suturing, Paracentesis, Arterial/Central/Dialysis Lines, Chest Drain, Pleural Tap, TPI, POCUS</p>
-    </section>
+    <div class="two-col">
+      <section id="skills" class="card reveal">
+        <h2><span class="num">04</span> Skills</h2>
+        <div class="chips">
+          <span>CPR</span><span>Intubation</span><span>Suturing</span><span>Paracentesis</span>
+          <span>Arterial Lines</span><span>Central Lines</span><span>Dialysis Lines</span>
+          <span>Chest Drain</span><span>Pleural Tap</span><span>TPI</span><span>POCUS</span>
+        </div>
+      </section>
 
-    <section>
-      <h2>Interests</h2>
-      <ul>
-        <li>Emergency Medicine: Quality & Resuscitation</li>
-        <li>Pediatrics</li>
-        <li>Psychiatry & Psychology</li>
-        <li>Research & Academics</li>
-      </ul>
-    </section>
+      <section id="interests" class="card reveal">
+        <h2><span class="num">05</span> Interests</h2>
+        <ul class="interests">
+          <li>Emergency Medicine: Quality &amp; Resuscitation</li>
+          <li>Pediatrics</li>
+          <li>Psychiatry &amp; Psychology</li>
+          <li>Research &amp; Academics</li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Dr. Shoubhik Banerjee</p>
+    <p>© <span id="year">2025</span> Dr. Shoubhik Banerjee</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

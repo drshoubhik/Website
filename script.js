@@ -1,21 +1,35 @@
-// Dark Mode Toggle
+// Dark Mode Toggle (remembers your choice)
+const root = document.documentElement;
 const toggleBtn = document.getElementById('darkModeToggle');
 toggleBtn.onclick = () => {
-  document.body.classList.toggle('dark-mode');
+  const isDark = root.dataset.theme
+    ? root.dataset.theme === 'dark'
+    : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = isDark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
 };
 
-// Accordion Animation
-const headers = document.querySelectorAll('.accordion h2');
-headers.forEach(header => {
-  header.addEventListener('click', () => {
-    const panel = header.nextElementSibling;
-    panel.classList.toggle('active');
+// Solid nav bar once you scroll past the top
+const topbar = document.querySelector('.topbar');
+const onScroll = () => topbar.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-    // Smooth scroll into view after expanding
-    setTimeout(() => {
-      if (panel.classList.contains('active')) {
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Fade sections in as they scroll into view
+const sections = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
-    }, 300);
-  });
-});
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(s => observer.observe(s));
+} else {
+  sections.forEach(s => s.classList.add('visible'));
+}
+
+// Keep the footer year current
+document.getElementById('year').textContent = new Date().getFullYear();
